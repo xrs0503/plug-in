@@ -1,0 +1,193 @@
+.header {
+  border-bottom: 1px solid #e8e8e8;
+  background-color: white;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 80px;
+}
+/**Header左侧应用菜单样式**/
+.header-left {
+  width: 25%;
+  display: flex;
+}
+.header-left .apply-icon {
+  color: #aaa;
+  font-size: 24px;
+}
+.header-left .apply-icon:hover .apply-dialaing {
+  display: block;
+}
+.header-left .apply-dialaing {
+  width: 350px;
+  height: 420px;
+  z-index: 100;
+  background-color: #6d7682ee;
+  border-radius: 10px;
+  margin-top: 0px;
+  font-size: 16px;
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px 2px #c4c4c4;
+}
+.header-left .apply-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: -30px;
+}
+.header-left .apply-data {
+  grid-template-columns: 115px 115px 115px;
+  cursor: pointer;
+  display: grid;
+  padding-top: 10px;
+}
+.header-left .apply-item:hover {
+  background-color: #ebebeb;
+  border-radius: 10px;
+}
+.header-left .apply-dialaing::after {
+  content: '';
+  position: absolute;
+  border: 8px solid;
+  border-color: transparent transparent #c5c5c5 transparent;
+  left: 10px;
+  top: -16px;
+}
+.header-left .apply-dialaing::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -16px;
+  left: 10px;
+  z-index: 2;
+}
+.header-left .apply-item {
+  text-align: center;
+}
+/**Header中间导航菜单样式**/
+.navigationMenu {
+  width: 62%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigationMenu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+}
+:where(.css-dev-only-do-not-override-xu9wm8).ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-xu9wm8).ant-menu-light > .ant-menu.ant-menu-horizontal > .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-xu9wm8).ant-menu-light.ant-menu-horizontal > .ant-menu-submenu-selected,
+:where(.css-dev-only-do-not-override-xu9wm8).ant-menu-light > .ant-menu.ant-menu-horizontal > .ant-menu-submenu-selected {
+  background-color: #ebebeb;
+  border: none;
+  color: black;
+}
+/**Header右侧单样式**/
+label {
+  width: 55px;
+  height: 30px;
+  display: block;
+  background-color: #222;
+  border-radius: 40px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.4), inset 0px -1px 3px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+label:after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  background: #eee;
+  border-radius: 32px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+input {
+  visibility: hidden;
+}
+input:checked + label {
+  background-color: #eee;
+}
+input:checked + label::after {
+  left: 51px;
+  transform: translateX(-100%);
+  background: #222;
+}
+label:active:after {
+  width: 40px;
+}
+input:checked + label + .bg {
+  background-color: #222;
+}
+label,
+input {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.user {
+  border-radius: 40px;
+  width: 45px;
+  height: 45px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.user-dialaing {
+  width: 200px;
+  height: 270px;
+  z-index: 100;
+  background-color: #6d7682ee;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: -6px;
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px 2px #c4c4c4;
+}
+.userClick:hover .user-dialaing {
+  display: block;
+}
+.user-dialaing::after {
+  content: '';
+  position: absolute;
+  border: 8px solid;
+  border-color: transparent transparent #c5c5c5 transparent;
+  left: 45px;
+  top: -16px;
+}
+.user-dialaing::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -16px;
+  left: 45px;
+  z-index: 2;
+}
+.useritem {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.setCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
